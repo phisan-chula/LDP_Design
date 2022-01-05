@@ -1,0 +1,21 @@
+#
+# Example for Low Distortion Projection design
+#
+KML      : DOH_107_CDOW.kml     # a linestring or a polygon in GE
+GRID     : 2                     #  1 : 10,  2: 100,  3: 1000
+BUFF     : 150                   # buffer for linestring 
+
+LDP :
+   TMC : +proj=tmerc +lat_0=19.55 +lon_0=99.06666666666666 +k_0=1.0000847
+         +x_0=+20000 +y_0=+60000 +ellps=GRS80  +units=m +no_defs
+
+   LCC : proj=lcc +lon_0=99.06666666666666 +lat_0=19.55
+         +lat_1=19.55 +k_0=1.0000847 +x_0=20000 +y_0=+60000
+         +ellps=GRS80  +units=m +no_defs
+
+   OMC : proj=omerc +lat_0=19.55 +lonc=99.06666666666666
+         +x_0=+20000 +y_0=+60000 +alpha=+40 +k_0=1.0000847
+         +ellps=GRS80  +units=m +no_defs
+
+CSV_UTM  : DOH107_GNSS.csv   # control point / setting out files
+ 

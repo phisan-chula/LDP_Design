@@ -1,0 +1,88 @@
+********************** uiDesign ************************
+*** P.Santitamnont (phisan.chula@gmail.com) Oct.2021 ***
+********************************************************
+Reading YAML DOH_107_CDOW/DOH_107_CDOW.yaml ...
+Writing all results in directory/folder DOH_107_CDOW/RESULTS ...
+Reading KML DOH_107_CDOW/DOH_107_CDOW.kml ...
+Input Linestring with length 37,278 m.
+*** [1] Topography Reviewing ... ***
+        MSL  UNDUL   HAE   HSF
+count 1,041  1,041 1,041 1,041
+mean    579    -39   539   -85
+std      89      0    89    14
+min     421    -39   381  -142
+25%     539    -39   499   -91
+50%     575    -39   535   -84
+75%     619    -39   579   -78
+max     946    -39   906   -60
+============================================================
+Mean topo MSL over ROI : 579  m.
+Mean topo HAE over ROI : 539 m.
+k_0 PP coincided with topo : 1.0000847 (exact 7-digit)
+Mean Latitude of ROI    : ('19°33′', 19.55)
+Mean Longitude of ROI   : ('99°04′', 99.06666666666666)
+============================================================
+*** [2] SUGGESTION DESIGN ... ***
+LDP :
+   TMC : +proj=tmerc +lat_0=19.55 +lon_0=99.06666666666666 
+         +k_0=1.0000847 +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   LCC : proj=lcc +lon_0=99.06666666666666 +lat_0=19.55
+         +lat_1=19.55  +k_0=1.0000847 
+         +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   OMC : proj=omerc +lat_0=19.55 +lonc=99.06666666666666 
+         +x_0=+0 +y_0=+0 +alpha=+45 +k_0=1.0000847 
+         +ellps=GRS80 +units=m +no_defs 
+*** [3] PROCESSING LDP and PSF/CSF Analysis ... ***
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+UTM : +proj=utm +zone=47 +datum=WGS84 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        UTM_E     UTM_N  UTM_PSF  UTM_CSF
+count   1,041     1,041    1,041    1,041
+mean  506,735 2,160,783     -399     -484
+std     4,829     6,453        1       13
+min   498,000 2,149,000     -400     -541
+25%   503,000 2,155,000     -400     -489
+50%   506,300 2,162,100     -400     -483
+75%   511,100 2,166,200     -398     -478
+max   514,300 2,172,200     -397     -460
+Plotting result in DOH_107_CDOW/RESULTS/CSF_UTM.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+TMC : +proj=tmerc +lat_0=19.55 +lon_0=99.0666666666667 +k=1.0000847 +x_0=20000 +y_0=60000 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+       TMC_E  TMC_N  TMC_PSF  TMC_CSF
+count  1,041  1,041    1,041    1,041
+mean  19,741 59,096       85        0
+std    4,834  6,454        0       14
+min   10,998 47,310       85      -57
+25%   16,002 53,311       85       -6
+50%   19,307 60,413       85        1
+75%   24,110 64,514       85        6
+max   27,314 70,515       86       26
+Plotting result in DOH_107_CDOW/RESULTS/CSF_TMC.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+LCC : +proj=lcc +lat_1=19.55 +lat_0=19.55 +lon_0=99.0666666666667 +k_0=1.0000847 +x_0=20000 +y_0=60000 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+       LCC_E  LCC_N  LCC_PSF  LCC_CSF
+count  1,041  1,041    1,041    1,041
+mean  19,741 59,096       85        0
+std    4,834  6,454        0       14
+min   10,998 47,310       85      -57
+25%   16,002 53,311       85       -6
+50%   19,307 60,413       85        1
+75%   24,110 64,514       86        7
+max   27,314 70,515       87       26
+Plotting result in DOH_107_CDOW/RESULTS/CSF_LCC.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+OMC : +proj=omerc +lat_0=19.55 +lonc=99.0666666666667 +alpha=40 +gamma=40 +k=1.0000847 +x_0=20000 +y_0=60000 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+       OMC_E  OMC_N  OMC_PSF  OMC_CSF
+count  1,041  1,041    1,041    1,041
+mean  19,741 59,096       85       -0
+std    4,834  6,454        0       14
+min   10,998 47,310       85      -58
+25%   16,002 53,311       85       -6
+50%   19,307 60,413       85        1
+75%   24,110 64,514       85        6
+max   27,314 70,515       85       25
+Plotting result in DOH_107_CDOW/RESULTS/CSF_OMC.png ...
+*** [4] Write report and sampling GIS file ... ***
